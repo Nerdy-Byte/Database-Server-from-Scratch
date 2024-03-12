@@ -24,9 +24,9 @@ public interface TreeNode <T> {
     // Might be useful for you
     default public T convertBytesToT(byte[] bytes, Class<T> typeClass){
         
-        /* Write your code here */
-
-        return null;
+        String k = new String(bytes);
+        T val = (T) k;
+        return val;
     }
     
 }

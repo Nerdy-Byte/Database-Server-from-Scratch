@@ -6,7 +6,7 @@ package storage;
 public abstract class AbstractBlock {
     
     protected static final int block_capacity = 4096; // 4KB fixed size blocks
-    protected byte[] data;
+    protected byte[] data; //java ds stores the array of byte max value 255 in one cell
 
     protected AbstractBlock(byte[] data) {
         this.data = new byte[block_capacity];
@@ -23,7 +23,7 @@ public abstract class AbstractBlock {
 
     public int get_block_capacity() {
         return block_capacity;
-    }
+    } //one block capacity is 4096B
 
     public byte[] get_data() {
         return data;
